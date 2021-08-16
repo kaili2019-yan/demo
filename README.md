@@ -4,11 +4,12 @@
 
 - python 3.6
 - django 2.2
+- redis==2.10.6
 
 # 部署方法
 1. 安装基础环境
 ```
-pip install -r requirements.txt
+pip install -r requires.txt
 ```
 
 2. 初始化数据库
