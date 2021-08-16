@@ -18,7 +18,7 @@ import ldap
 from django_auth_ldap.config import LDAPSearch
 
 hostname = socket.gethostname()
-if "alibj-op-net1-vm" in hostname:
+if "op-net1-vm" in hostname:
     from .settings_prod import *
 else:
     from .settings_dev import *
@@ -30,7 +30,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '9md7#%4-td5c24aayk2*5k3e(0qnrr95$qy1baol^41hcvy136'
+SECRET_KEY = '************aayk2*5k3e(0qnrr95$qy1baol^41hcvy136'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -64,7 +64,7 @@ CACHES = {
 }
 
 # ldap config
-LDAP_HOST = 'ldap://10.51.11.39:389'
+LDAP_HOST = 'ldap://127.0.0.1:389'
 LDAP_ADMIN = 'cn=admin,dc=testldap,dc=com'
 LDAP_PASS = '123456'
 BASE_DN = "ou=People,dc=testldap,dc=com"
